@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Aulas Agendadas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <h2>João Dorflex</h2>
+      <p>Data: 23/08/2017</p>
+      <p>Horário: 14hs</p>
+      <p>Local: R. Dos Esquecidos 1250, Jd. Já se foram</p>
+    </ion-item>
+    <ion-item>
+      <h2>Maria das Dores</h2>
+      <p>Data: 24/08/2017</p>
+      <p>Horário: 13hs</p>
+      <p>Local: R. Dos Lembrados 350, Jd. Não se foram</p>
+    </ion-item>
+    <ion-item>
+      <h2>Doril Nascimento</h2>
+      <p>Data: 25/08/2017</p>
+      <p>Horário: 14hs</p>
+      <p>Local: R. Dos Moribundos 250, Jd. Moriburianos</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab color="danger" (click)="adicionarAula()"><ion-icon name="add-circle"></ion-icon></button>
+      <button  name="alt" ion-fab color="danger" (click)="alterarAula()"><ion-icon name="done-all"></ion-icon></button>
+      <button  ion-fab color="danger" (click)="removerAula()"><ion-icon name="trash"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

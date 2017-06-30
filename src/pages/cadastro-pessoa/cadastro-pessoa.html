@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro de Pessoa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-input type="text" placeholder="Seu nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--<ion-label>Data de Nascimento</ion-label>-->
+        <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de Nascimento"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <ion-list radio-group>
+      <ion-list-header>
+        Sexo
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio value="mas"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Feminino</ion-label>
+        <ion-radio value="fem"></ion-radio>
+      </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="RG"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="CPF/CNPJ"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block>Cadastrar Pessoa</button>
+</ion-content>

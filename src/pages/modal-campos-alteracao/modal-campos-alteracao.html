@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{conjunto.titulo}}
+    </ion-title>
+    <ion-buttons start (click)="dismiss()">
+      <button ion-button>
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngIf="conjunto.tela == 'Aulas'">
+    <ion-item>
+      <ion-datetime displayFormat="HH:mm - DD/MM/YYYY" placeholder="Hora e Dia de Início" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-datetime displayFormat="HH:mm - DD/MM/YYYY" placeholder="Hora e Dia de Término" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Fisioterapeuta" value="Fisioterapeuta"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="conjunto.tela == 'Exercicios'">
+    <ion-item>
+      <ion-datetime displayFormat="HH:mm - D/M/YYYY" placeholder="Hora e Dia de Início" value="13:30 - 21/07/2017"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-datetime displayFormat="HH:mm" placeholder="Hora e Dia de Término" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Fisioterapeuta" value="Fisioterapeuta"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block icon-right (click)="alterar()">
+    Alterar
+    <ion-icon name="done-all"></ion-icon>
+  </button>
+</ion-content>

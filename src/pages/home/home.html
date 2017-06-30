@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastro de Usuário
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group>
+    <ion-list-header>
+      Tipos de Usuários
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fisioterapeuta</ion-label>
+      <ion-radio #f value="fisio"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Paciente</ion-label>
+      <ion-radio value="pac"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <button (click)="selecionar(f)" ion-button full>Cadastrar</button>
+</ion-content>
